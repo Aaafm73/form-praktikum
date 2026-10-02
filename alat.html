@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Alat | Inventaris Laboratorium</title>
+    <link rel="stylesheet" href="css/frontend.css">
+    <script src="https://unpkg.com/feather-icons" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo-navbar">Inventaris<span>Laboratorium</span> <i data-feather="monitor"></i></a>
+        <div class="navbar-nav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#lab">Laboratorium</a>
+            <a href="alat.html">Katalog Alat</a>
+            <a href="pinjam.html">Pinjam</a>
+        </div>
+        <div class="navbar-extra">
+            <form class="navbar-search-form" id="navbar-search-form" action="alat.html" method="get" hidden>
+                <input type="search" name="q" id="navbar-search-input" placeholder="Cari alat atau ID" aria-label="Cari alat atau ID" required>
+                <button type="submit" aria-label="Cari"><i data-feather="arrow-right"></i></button>
+            </form>
+            <button class="navbar-icon-button" type="button" id="search-toggle" aria-label="Buka pencarian" aria-expanded="false">
+                <i data-feather="search"></i>
+            </button>
+            <button class="navbar-icon-button" type="button" id="hamburger-menu" aria-label="Buka menu" aria-expanded="false">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <header class="page-intro">
+            <div>
+                <p class="eyebrow">Inventaris Laboratorium</p>
+                <h1 id="catalog-title">Semua Alat</h1>
+                <p id="catalog-description">Daftar alat praktikum.</p>
+            </div>
+            <a class="button button-secondary" href="index.html#lab">Pilih laboratorium</a>
+        </header>
+        <section class="catalog-grid" id="catalog-grid" aria-label="Daftar alat"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inventaris Laboratorium.</p>
+    </footer>
+</body>
+</html>

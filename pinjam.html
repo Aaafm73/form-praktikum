@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Peminjaman | Inventaris Laboratorium</title>
+    <link rel="stylesheet" href="css/frontend.css">
+    <script src="https://unpkg.com/feather-icons" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo-navbar">Inventaris<span>Laboratorium</span> <i data-feather="monitor"></i></a>
+        <div class="navbar-nav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#lab">Laboratorium</a>
+            <a href="alat.html">Katalog Alat</a>
+            <a href="pinjam.html">Pinjam</a>
+        </div>
+        <div class="navbar-extra">
+            <form class="navbar-search-form" id="navbar-search-form" action="alat.html" method="get" hidden>
+                <input type="search" name="q" id="navbar-search-input" placeholder="Cari alat atau ID" aria-label="Cari alat atau ID" required>
+                <button type="submit" aria-label="Cari"><i data-feather="arrow-right"></i></button>
+            </form>
+            <button class="navbar-icon-button" type="button" id="search-toggle" aria-label="Buka pencarian" aria-expanded="false">
+                <i data-feather="search"></i>
+            </button>
+            <button class="navbar-icon-button" type="button" id="hamburger-menu" aria-label="Buka menu" aria-expanded="false">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <header class="page-intro">
+            <div>
+                <p class="eyebrow">Formulir</p>
+                <h1>Ajukan Peminjaman</h1>
+                <p>Pastikan alat dan tanggal peminjaman sudah sesuai, lalu isi identitas peminjam.</p>
+            </div>
+        </header>
+
+        <section class="borrow-panel">
+            <form class="borrow-form" id="borrow-form">
+                <div class="form-field">
+                    <label for="nama">Nama lengkap</label>
+                    <input type="text" name="nama" id="nama" autocomplete="name" placeholder="Masukkan nama lengkap" required>
+                </div>
+                <div class="form-field">
+                    <label for="nim">NIM</label>
+                    <input type="text" name="nim" id="nim" inputmode="numeric" placeholder="Masukkan NIM" required>
+                </div>
+                <div class="form-field">
+                    <label for="alat-nama">Alat yang dipinjam</label>
+                    <input type="text" id="alat-nama" readonly required>
+                    <input type="hidden" name="alat" id="alat-id">
+                </div>
+                <div class="form-field">
+                    <label for="tanggal">Tanggal pinjam</label>
+                    <input type="date" name="tanggal" id="tanggal" required>
+                </div>
+                <p class="form-note">Tanggal otomatis diisi dengan tanggal hari ini dan masih dapat diubah.</p>
+                <div class="borrow-actions">
+                    <button class="button button-primary" type="submit">Kirim permintaan</button>
+                    <a class="button button-secondary" href="alat.html">Kembali ke katalog</a>
+                </div>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inventaris Laboratorium.</p>
+    </footer>
+</body>
+</html>
